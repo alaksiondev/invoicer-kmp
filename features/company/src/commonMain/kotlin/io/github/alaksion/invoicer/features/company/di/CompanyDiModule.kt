@@ -7,6 +7,8 @@ import io.github.alaksion.invoicer.features.company.domain.repository.CompanyRep
 import io.github.alaksion.invoicer.features.company.presentation.model.CreateCompanyFormManager
 import io.github.alaksion.invoicer.features.company.presentation.screens.create.steps.address.CompanyAddressScreenModel
 import io.github.alaksion.invoicer.features.company.presentation.screens.create.steps.info.CompanyInfoScreenModel
+import io.github.alaksion.invoicer.features.company.presentation.screens.create.steps.payaccount.intermediary.IntermediaryPayInfoScreenModel
+import io.github.alaksion.invoicer.features.company.presentation.screens.create.steps.payaccount.primary.PrimaryPayInfoScreenModel
 import io.github.alaksion.invoicer.features.company.presentation.screens.select.SelectCompanyScreenModel
 import io.github.alaksion.invoicer.foundation.session.Session
 import kotlinx.coroutines.Dispatchers
@@ -43,6 +45,18 @@ val companyDiModule = module {
 
     factory {
         CompanyAddressScreenModel(
+            form = get<CreateCompanyFormManager>().getForm()
+        )
+    }
+
+    factory {
+        PrimaryPayInfoScreenModel(
+            form = get<CreateCompanyFormManager>().getForm()
+        )
+    }
+
+    factory {
+        IntermediaryPayInfoScreenModel(
             form = get<CreateCompanyFormManager>().getForm()
         )
     }

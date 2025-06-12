@@ -13,6 +13,31 @@ class CreateCompanyForm {
     var state: String = ""
     var postalCode: String = ""
     var countryCode: String = ""
+
+    var primaryPayAccount = PayAccountInfo(
+        iban = "",
+        swift = "",
+        bankName = "",
+        bankAddress = "",
+        shouldContinueToIntermediary = false
+    )
+
+    var intermediaryPayAccount: IntermediaryAccountInfo? = null
+
+    data class PayAccountInfo(
+        val iban: String,
+        val swift: String,
+        val bankName: String,
+        val bankAddress: String,
+        val shouldContinueToIntermediary: Boolean
+    )
+
+    data class IntermediaryAccountInfo(
+        val iban: String,
+        val swift: String,
+        val bankName: String,
+        val bankAddress: String,
+    )
 }
 
 internal class CreateCompanyFormManager {

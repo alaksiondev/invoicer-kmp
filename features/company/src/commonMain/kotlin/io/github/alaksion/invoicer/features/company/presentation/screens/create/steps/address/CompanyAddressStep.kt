@@ -29,6 +29,7 @@ import invoicer.features.company.generated.resources.create_company_address_post
 import invoicer.features.company.generated.resources.create_company_address_state_label
 import invoicer.features.company.generated.resources.create_company_address_title
 import invoicer.features.company.generated.resources.create_company_continue
+import io.github.alaksion.invoicer.features.company.presentation.screens.create.steps.payaccount.primary.PrimaryPayInfoScreen
 import io.github.alaksion.invoicer.foundation.designSystem.components.InputField
 import io.github.alaksion.invoicer.foundation.designSystem.components.ScreenTitle
 import io.github.alaksion.invoicer.foundation.designSystem.components.buttons.BackButton
@@ -54,7 +55,7 @@ internal class CompanyAddressStep : Screen {
                 onCityChange = screenModel::setCity,
                 onStateChange = screenModel::setState,
                 onPostalCodeChange = screenModel::setPostalCode,
-                onNextClick = { /* Handle next click */ },
+                onNextClick = { navigator?.push(PrimaryPayInfoScreen()) },
                 onBackClick = { navigator?.pop() })
         }
 

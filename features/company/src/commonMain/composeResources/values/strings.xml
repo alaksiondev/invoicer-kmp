@@ -31,4 +31,20 @@
     <string name="create_company_address_state_label">State</string>
     <string name="create_company_address_postal_code_label">Postal Code</string>
 
+    <!-- Create company pay info -->
+    <string name="create_company_pay_info_swift_code_label">Swift Code</string>
+    <string name="create_company_pay_info_iban_code_label">IBAN Code</string>
+    <string name="create_company_pay_info_bank_name_label">Bank Name</string>
+    <string name="create_company_pay_info_bank_address_label">Bank Address</string>
+
+    <!-- Create company pay info Primary -->
+    <string name="create_company_pay_info_primary_title">Payment Account</string>
+    <string name="create_company_pay_info_primary_description">Inform payment account</string>
+    <string name="create_company_pay_info_primary_use_intermediary">Add intermediary account</string>
+
+    <!-- Create company pay info intermediary -->
+    <string name="create_company_pay_info_intermediary_title">Intermediary Account</string>
+    <string name="create_company_pay_info_intermediary_description">Inform intermediary account</string>
+
+
 </resources>
